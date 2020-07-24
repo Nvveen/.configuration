@@ -12,3 +12,4 @@ ln -s $PWD/ohmyzsh/custom/themes/powerlevel10k $HOME/.oh-my-zsh/custom/themes/po
 
 cp zsh/zshrc ~/.zshrc
 cp zsh/zprofile ~/.zprofile
+cp zsh/p10k.zsh ~/.p10k.zsh
