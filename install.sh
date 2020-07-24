@@ -1,5 +1,6 @@
 #!/bin/bash
 
+mv $HOME/.tmux.conf $HOME/.tmux.conf.bak
 ln -s $HOME/.configuration/.tmux/.tmux.conf $HOME/.tmux.conf
 cp .tmux/.tmux.conf.local $HOME/.tmux.conf.local
 
