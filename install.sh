@@ -1,16 +1,16 @@
 #!/bin/bash
 
-mv $HOME/.tmux.conf $HOME/.tmux.conf.bak
-ln -s $HOME/.configuration/.tmux/.tmux.conf $HOME/.tmux.conf
-cp .tmux/.tmux.conf.local $HOME/.tmux.conf.local
+ln -sf $PWD/.tmux/.tmux.conf $HOME/.tmux.conf
+ln -sf $PWD/.tmux/.tmux.conf.local $HOME/.tmux.conf.local
 
 cp vim/vimrc $HOME/.vimrc
+ln -sf $PWD/vim/vimrc $HOME/.vimrc
 
 y | sh -c "$(wget -O- https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 ln -s $PWD/ohmyzsh/custom/plugins/zsh-autosuggestions $HOME/.oh-my-zsh/custom/plugins/zsh-autosuggestions
 ln -s $PWD/ohmyzsh/custom/plugins/zsh-syntax-highlighting $HOME/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting
 ln -s $PWD/ohmyzsh/custom/themes/powerlevel10k $HOME/.oh-my-zsh/custom/themes/powerlevel10k
 
-cp zsh/zshrc ~/.zshrc
-cp zsh/zprofile ~/.zprofile
-cp zsh/p10k.zsh ~/.p10k.zsh
+ln -sf $PWD/zsh/zshrc $HOME/.zshrc
+ln -sf $PWD/zsh/zprofile $HOME/.zprofile
+ln -sf $PWD/zsh/p10k.zsh $HOME/.p10k.zsh
