@@ -5,6 +5,7 @@ ln -sf $PWD/.tmux/.tmux.conf.local $HOME/.tmux.conf.local
 
 cp vim/vimrc $HOME/.vimrc
 ln -sf $PWD/vim/vimrc $HOME/.vimrc
+ln -sf $PWD/vim/vim_runtime $HOME/.vim_runtime
 
 y | sh -c "$(wget -O- https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 ln -s $PWD/ohmyzsh/custom/plugins/zsh-autosuggestions $HOME/.oh-my-zsh/custom/plugins/zsh-autosuggestions

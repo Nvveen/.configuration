@@ -10,3 +10,6 @@
 [submodule "ohmyzsh/custom/themes/powerlevel10k"]
 	path = ohmyzsh/custom/themes/powerlevel10k
 	url = https://github.com/romkatv/powerlevel10k.git
+[submodule "vim/vim_runtime"]
+	path = vim/vim_runtime
+	url = https://github.com/amix/vimrc.git
