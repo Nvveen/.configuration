@@ -90,6 +90,7 @@ plugins=(
 	zsh-autosuggestions
     zsh-syntax-highlighting
     tmux
+    ssh-agent
 )
 
 # export ZSH_TMUX_AUTOSTART=true
