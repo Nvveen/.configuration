@@ -5,7 +5,7 @@ OLD_PWD="${PWD}"
 
 cd $SOURCE;
 
-git pull --recurse-submodules
+git submodule update --init --recursive
 
 if [[ -d "$SOURCE/.tmux" ]]; then
     ln -sf $SOURCE/.tmux/.tmux.conf $HOME/.tmux.conf
