@@ -1,6 +1,11 @@
 #!/bin/bash
 
 SOURCE=$(dirname "${BASH_SOURCE[0]}");
+OLD_PWD="${PWD}"
+
+cd $SOURCE;
+
+git pull --recurse-submodules
 
 if [[ -d "$SOURCE/.tmux" ]]; then
     ln -sf $SOURCE/.tmux/.tmux.conf $HOME/.tmux.conf
@@ -18,3 +23,5 @@ ln -s $SOURCE/ohmyzsh/custom/themes/powerlevel10k $HOME/.oh-my-zsh/custom/themes
 ln -sf $SOURCE/zsh/zshrc $HOME/.zshrc
 ln -sf $SOURCE/zsh/zprofile $HOME/.zprofile
 ln -sf $SOURCE/zsh/p10k.zsh $HOME/.p10k.zsh
+
+cd $OLD_PWD;
