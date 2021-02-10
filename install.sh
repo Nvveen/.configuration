@@ -1,17 +1,20 @@
 #!/bin/bash
 
-ln -sf $PWD/.tmux/.tmux.conf $HOME/.tmux.conf
-ln -sf $PWD/.tmux/.tmux.conf.local $HOME/.tmux.conf.local
+SOURCE=$(dirname "${BASH_SOURCE[0]}");
 
-cp vim/vimrc $HOME/.vimrc
-ln -sf $PWD/vim/vimrc $HOME/.vimrc
-ln -sf $PWD/vim/vim_runtime $HOME/.vim_runtime
+if [[ -d "$SOURCE/.tmux" ]]; then
+    ln -sf $SOURCE/.tmux/.tmux.conf $HOME/.tmux.conf
+    ln -sf $SOURCE/.tmux/.tmux.conf.local $HOME/.tmux.conf.local
+fi
 
-y | sh -c "$(wget -O- https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-ln -s $PWD/ohmyzsh/custom/plugins/zsh-autosuggestions $HOME/.oh-my-zsh/custom/plugins/zsh-autosuggestions
-ln -s $PWD/ohmyzsh/custom/plugins/zsh-syntax-highlighting $HOME/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting
-ln -s $PWD/ohmyzsh/custom/themes/powerlevel10k $HOME/.oh-my-zsh/custom/themes/powerlevel10k
+ln -sf $SOURCE/vim/vimrc $HOME/.vimrc
+ln -sf $SOURCE/vim/vim_runtime $HOME/.vim_runtime
 
-ln -sf $PWD/zsh/zshrc $HOME/.zshrc
-ln -sf $PWD/zsh/zprofile $HOME/.zprofile
-ln -sf $PWD/zsh/p10k.zsh $HOME/.p10k.zsh
+sh -c "$(wget -O- https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+ln -s $SOURCE/ohmyzsh/custom/plugins/zsh-autosuggestions $HOME/.oh-my-zsh/custom/plugins/zsh-autosuggestions
+ln -s $SOURCE/ohmyzsh/custom/plugins/zsh-syntax-highlighting $HOME/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting
+ln -s $SOURCE/ohmyzsh/custom/themes/powerlevel10k $HOME/.oh-my-zsh/custom/themes/powerlevel10k
+
+ln -sf $SOURCE/zsh/zshrc $HOME/.zshrc
+ln -sf $SOURCE/zsh/zprofile $HOME/.zprofile
+ln -sf $SOURCE/zsh/p10k.zsh $HOME/.p10k.zsh
