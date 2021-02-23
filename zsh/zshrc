@@ -127,7 +127,7 @@ source $ZSH/oh-my-zsh.sh
 
 export EDITOR=vim
 export NPM_PACKAGES=$HOME/.local/share/npm
-export NODE_PATH="$NPM_PACKAGES/lib/node_moduels:$NODE_PATH"
+export NODE_PATH="$NPM_PACKAGES/lib/node_modules:$NODE_PATH"
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
