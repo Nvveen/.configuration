@@ -7,6 +7,8 @@ cd $SOURCE;
 
 git submodule update --init --recursive
 
+./uninstall.sh
+
 if [[ -d "$SOURCE/.tmux" ]]; then
     ln -sf $SOURCE/.tmux/.tmux.conf $HOME/.tmux.conf
     ln -sf $SOURCE/.tmux/.tmux.conf.local $HOME/.tmux.conf.local
