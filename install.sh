@@ -16,9 +16,9 @@ ln -sf $SOURCE/vim/vimrc $HOME/.vimrc
 ln -sf $SOURCE/vim/vim_runtime $HOME/.vim_runtime
 
 sh -c "$(wget -O- https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-ln -s $SOURCE/ohmyzsh/custom/plugins/zsh-autosuggestions $HOME/.oh-my-zsh/custom/plugins/zsh-autosuggestions
-ln -s $SOURCE/ohmyzsh/custom/plugins/zsh-syntax-highlighting $HOME/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting
-ln -s $SOURCE/ohmyzsh/custom/themes/powerlevel10k $HOME/.oh-my-zsh/custom/themes/powerlevel10k
+ln -sf $SOURCE/ohmyzsh/custom/plugins/zsh-autosuggestions $HOME/.oh-my-zsh/custom/plugins/zsh-autosuggestions
+ln -sf $SOURCE/ohmyzsh/custom/plugins/zsh-syntax-highlighting $HOME/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting
+ln -sf $SOURCE/ohmyzsh/custom/themes/powerlevel10k $HOME/.oh-my-zsh/custom/themes/powerlevel10k
 
 ln -sf $SOURCE/zsh/zshrc $HOME/.zshrc
 ln -sf $SOURCE/zsh/zprofile $HOME/.zprofile
