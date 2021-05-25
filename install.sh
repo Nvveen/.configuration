@@ -1,6 +1,6 @@
 #!/bin/bash
 
-SOURCE=$(dirname "${BASH_SOURCE[0]}");
+SOURCE="$( cd -- "$(dirname "$0")" >/dev/null 2>&1 ; pwd -P )"
 OLD_PWD="${PWD}"
 
 cd $SOURCE;
